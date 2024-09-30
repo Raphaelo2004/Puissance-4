@@ -1,0 +1,63 @@
+/* pseudo code puissance 4 */
+
+
+//----------------------------------------constantes et types---------------------------------------------
+type tab = tableau[0..5,0..6] de entier;
+
+
+programme puissance4 c'est
+
+//------------------------------------------fonctions et procédures--------------------------------------
+
+procédure affiche_tableau(entF tableau : tab);
+procédure tirage(sortF tour : entier);
+procédure demande_action(entF/sortF tour : entier, entF tableau : tab, entF/sortF end : booléen);
+procédure gagne_ligne(entF tableau : tab, entF ligne : entier, entF/sortF end : booléen);
+procédure gagne_colonne(entF tableau : tab, entF colonne : entier, entF/sortF end : booléen);
+procédure gagneMonteDiagonal(entF tableau : tab, entF/sortF end : booléen);
+procédure gagneDescentDiagonal(entF tableau : tab, entF/sortF end : booléen);
+
+//------------------------------------------programme--------------------------------------------------
+
+
+début
+	tour : entier;
+	end : booleen;
+	
+	end := faux;
+
+	grille : tab[0..5,0..6] de entier;
+	pour ligne de 0 à 5 pas de 1 faire
+        pour colonne de 0 à 6 pas de 1 faire
+            grille[ligne][colonne] := 0;
+        finfaire
+    finfaire
+	
+	ecrireEcran("Le joueur n°1 a les carrés et le second a les triangles");
+	
+	tirage(sortE tour);                            // on regarde qui commence
+	afficher_tableau(entE Grille);                 // on affiche la grille une première fois
+
+	si (tour == 0) alors                           // boucle si le joueur 1 commence
+		tant que (end != vrai) faire               // tant que la partie n'est pas fini
+			demande_action(entE tour, entE grille);// demande ce que veut faire le joueur
+			afficher_tableau(entE grille);         // affiche le tableau actualisé
+			tour := tour + 1;                      
+			si (tour > 41) alors                   // si la grille est remplie (41 car on commence à 0 donc de 0 à 41 = 42 tours)
+				end = vrai;                        // partie terminée
+				ecrireEcran("Egalité");
+			finsi
+		finfaire
+	sinon                                          // boucle si le joueur 2 commence
+		tant que (end != vrai) faire               // tant que la partie n'est pas fini
+			demande_action(entE tour, entE grille);// demande ce que veut faire le joueur
+			afficher_tableau(entE grille);         // affiche le tableau actualisé
+			tour := tour + 1;
+			si (tour > 42) alors                   // si la grille est remplie ( 42 car on commence à 1 donc de 1 à 42 = 42 tours)
+				end = vrai;                        // partie terminée
+				ecrireEcran("Egalité");
+			finsi
+		finfaire
+	finsi
+fin
+
