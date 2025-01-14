@@ -28,7 +28,7 @@ Git (pour cloner le dépôt)
 
 Clonez le répertoire depuis GitHub :
 
-git clone https://github.com/votre-utilisateur/puissance4.git
+git clone https://github.com/Raphaelo2004/Puissance-4
 
 Naviguez dans le répertoire du projet :
 
