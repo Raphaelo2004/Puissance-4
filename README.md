@@ -2,7 +2,7 @@
 
 **Description**
 
-Puissance 4 (Connect Four) est un jeu de plateau classique pour deux joueurs. Le but du jeu est d'aligner quatre de ses jetons dans une rangée verticale, horizontale ou diagonale avant l'adversaire. Ce projet implémente une version numérique du jeu en Python (ou autre langage utilisé).
+Puissance 4 (Connect Four) est un jeu de plateau classique pour deux joueurs. Le but du jeu est d'aligner quatre de ses jetons dans une rangée verticale, horizontale ou diagonale avant l'adversaire. Ce projet implémente une version numérique du jeu en C.
 
 **Fonctionnalités**
 
